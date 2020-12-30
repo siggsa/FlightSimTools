@@ -5,11 +5,16 @@ public class Waypoint {
     private int ypos;
     private int heightConstraint;       //Height in constraint
 
-    public void Waypoint() {
-        //No-arg constructor
-        this.xpos = 0;
-        this.ypos = 0;
-        this.heightConstraint = 0;
+    public void setXpos(int xpos) {
+        this.xpos = xpos;
+    }
+
+    public void setYpos(int ypos) {
+        this.ypos = ypos;
+    }
+
+    public void setHeightConstraint(int heightConstraint) {
+        this.heightConstraint = heightConstraint;
     }
 
     public Waypoint(int xpos, int ypos, int heightConstraint){

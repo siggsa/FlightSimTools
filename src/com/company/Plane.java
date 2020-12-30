@@ -6,6 +6,22 @@ public class Plane {
     private int xpos;           //Degrees east
     private int ypos;           //Degrees north
 
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setXpos(int xpos) {
+        this.xpos = xpos;
+    }
+
+    public void setYpos(int ypos) {
+        this.ypos = ypos;
+    }
+
     private Plane() {
         //No-arg constructor
         this.speed = 0;
