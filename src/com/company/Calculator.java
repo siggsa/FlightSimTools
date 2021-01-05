@@ -10,6 +10,13 @@ public class Calculator {
         return dist;
     }
 
+    public double DistanceFromWaypointToWaypoint (Waypoint waypointA, Waypoint waypointB){
+        int dx = waypointA.getXpos()-waypointB.getXpos();
+        int dy = waypointA.getYpos()-waypointB.getYpos();
+        double dist = Math.sqrt(Math.pow(dx,2)+Math.pow(dy,2));
+        return dist;
+    }
+
     public double HeightFromPlaneToWaypoint (Plane plane, Waypoint waypoint){
         double delta;
         delta = waypoint.getHeightConstraint()-plane.getHeight();

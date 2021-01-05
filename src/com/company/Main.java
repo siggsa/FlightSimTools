@@ -3,7 +3,10 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	    sampleTest();
+    }
+
+    public static void sampleTest() {
         System.out.println("Initialize classes");
         Calculator calc = new Calculator();
         Plane plane = new Plane(350,20000,50,0);
@@ -18,6 +21,5 @@ public class Main {
         System.out.println(height);
         System.out.println(time);
         System.out.println(VS);
-
     }
 }
