@@ -32,4 +32,8 @@ public class Route {
     public void clearRoute() {
         route.clear();
     }
+
+    public int getSize() {
+        return route.size();
+    }
 }

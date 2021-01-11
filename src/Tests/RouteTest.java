@@ -61,4 +61,40 @@ class RouteTest {
         double routeDist = route.getRouteLength();
         Assertions.assertEquals(2500,routeDist);
     }
+
+    @Test
+    public void removeWaypointReducesLengthAndSize() {
+        waypointB.setXpos(500);
+        waypointD.setYpos(1500);
+        route.AddWaypoint(waypointA);
+        route.AddWaypoint(waypointB);
+        route.AddWaypoint(waypointC);
+        route.AddWaypoint(waypointD);
+
+        double routeDist1 = route.getRouteLength();
+        Assertions.assertEquals(2500,routeDist1);
+        Assertions.assertEquals(4,route.getSize());
+
+        route.RemoveLastWaypoint();
+
+        double routeDist2 = route.getRouteLength();
+        Assertions.assertEquals(1000,routeDist2);
+        Assertions.assertEquals(3,route.getSize());
+    }
+
+    @Test
+    public void addWaypointIncreaseLengthAndSize() {
+        waypointB.setXpos(500);
+        route.AddWaypoint(waypointA);
+
+        double routeDist1 = route.getRouteLength();
+        Assertions.assertEquals(0,routeDist1);
+        Assertions.assertEquals(1,route.getSize());
+
+        route.AddWaypoint(waypointB);
+
+        double routeDist2 = route.getRouteLength();
+        Assertions.assertEquals(500,routeDist2);
+        Assertions.assertEquals(2,route.getSize());
+    }
 }
